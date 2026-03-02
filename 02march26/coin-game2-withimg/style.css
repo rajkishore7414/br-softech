@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#game-world {
+  position: relative;        /* ← ALL children position inside this */
+  width: 800px;
+  height: 500px;
+  overflow: hidden;          /* ← Nothing escapes the world */
+  background-image: url('bg.png');
+  background-size: cover;
+  border: 3px solid #fff;
+}
+
+#player {
+  position: absolute;        /* ← Moves freely inside game-world */
+  width: 48px;
+  height: 48px;
+  background-image: url('player.png');
+  background-size: cover;
+}
+
+#score-display {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 20px;
+  font-family: monospace;
+  z-index: 10;
+}

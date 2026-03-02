@@ -1,0 +1,26 @@
+body {
+    background: #1e1e1e;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+}
+
+#game {
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(6, 60px);
+    grid-template-rows: repeat(10, 60px);
+    gap: 4px;
+    width: max-content;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+}
