@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drop & Merge</title>
+</head>
+<body style="background:#111; display:flex; justify-content:center; padding:20px;">
+  <canvas id="gameCanvas"></canvas>
+  <script>
+    const COLS = 10;
+    const ROWS = 16;
+    const CELL_SIZE = 50;
+
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width  = COLS * CELL_SIZE;
+    canvas.height = ROWS * CELL_SIZE;
+
+    ctx.fillStyle = '#222';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  </script>
+</body>
+</html>

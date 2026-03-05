@@ -1,0 +1,21 @@
+#board {
+  display: grid;
+  grid-template-columns: repeat(6, 60px);
+  grid-template-rows: repeat(10, 60px);
+  gap: 4px;
+  background: #333;
+  padding: 8px;
+  width: fit-content;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}
