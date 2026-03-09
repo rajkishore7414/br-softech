@@ -1,10 +1,13 @@
-//this variables will not change through out the program
+// ─────────────────────────────────────────────
+// SETTINGS
+// ─────────────────────────────────────────────
 const COLS  = 6;
 const ROWS  = 10;
 const SPEED = 600;
 
-
-//this varibales will change/update throughout the program
+// ─────────────────────────────────────────────
+// GAME STATE
+// ─────────────────────────────────────────────
 let grid = [];
 let current = {};
 let nextValue = 0;
@@ -12,11 +15,9 @@ let score = 0;
 let gameLoop = null;
 let gameActive = false;
 
-// Track which cells just merged
-let mergingCells = new Set();
-
-
-// this fn createGrid will create empty array memory reference in the game
+// ─────────────────────────────────────────────
+// CREATE EMPTY GRID
+// ─────────────────────────────────────────────
 function createGrid() {
   grid = [];
   for (let r = 0; r < ROWS; r++) {
@@ -27,16 +28,17 @@ function createGrid() {
   }
 }
 
-
-//this fn will select random value from an array
+// ─────────────────────────────────────────────
+// RANDOM VALUE
+// ─────────────────────────────────────────────
 function randomValue() {
   const choices = [2,2,2,4,4,8];
   return choices[Math.floor(Math.random()*choices.length)];
 }
 
-
-
-// this fn reates a new falling block at the top of the board.
+// ─────────────────────────────────────────────
+// SPAWN BLOCK
+// ─────────────────────────────────────────────
 function spawnBlock(){
 
   let possibleCols = [];
@@ -62,10 +64,12 @@ function spawnBlock(){
 
   nextValue = randomValue();
   document.getElementById("next-value").textContent = nextValue;
+
 }
 
-
-//this fn will check rows and cols bounds
+// ─────────────────────────────────────────────
+// MOVE CHECK
+// ─────────────────────────────────────────────
 function canMoveTo(row,col){
 
   if(col < 0 || col >= COLS) return false;
@@ -75,13 +79,10 @@ function canMoveTo(row,col){
   return true;
 }
 
-
 // ─────────────────────────────────────────────
-// TICK (FIXED FUNCTION)
+// GRAVITY
 // ─────────────────────────────────────────────
 function tick(){
-
-  if(!gameActive) return;
 
   if(canMoveTo(current.row+1,current.col)){
     current.row++;
@@ -93,9 +94,9 @@ function tick(){
 
 }
 
-
-
-// this fn is checking gameover condition
+// ─────────────────────────────────────────────
+// CHECK GAME OVER
+// ─────────────────────────────────────────────
 function checkGameOver(){
 
   for(let c=0;c<COLS;c++){
@@ -106,10 +107,12 @@ function checkGameOver(){
   }
 
   return false;
+
 }
 
-
-//this fn blocks 
+// ─────────────────────────────────────────────
+// LAND BLOCK
+// ─────────────────────────────────────────────
 function landBlock(){
 
   grid[current.row][current.col] = current.value;
@@ -127,18 +130,14 @@ function landBlock(){
 
   render();
 
-  setTimeout(() => {
-    mergingCells.clear();
-    render();
-  }, 400);
-
 }
 
-
-// merge logic
+// ─────────────────────────────────────────────
+// MERGE STARTING FROM LANDING CELL
+// ─────────────────────────────────────────────
 function mergeFrom(row,col){
 
-  let changed = true;
+  let changed = true; //it keeps track of merge happening. 
 
   while(changed){
 
@@ -156,8 +155,6 @@ function mergeFrom(row,col){
 
       row++;
 
-      mergingCells.add(`${row},${col}`);
-
       changed = true;
     }
 
@@ -171,8 +168,6 @@ function mergeFrom(row,col){
 
       compactColumn(col-1);
       compactColumn(col);
-
-      mergingCells.add(`${row},${col}`);
 
       changed = true;
     }
@@ -188,8 +183,6 @@ function mergeFrom(row,col){
       compactColumn(col+1);
       compactColumn(col);
 
-      mergingCells.add(`${row},${col}`);
-
       changed = true;
     }
 
@@ -197,8 +190,9 @@ function mergeFrom(row,col){
 
 }
 
-
-// frees the merged space
+// ─────────────────────────────────────────────
+// COLUMN GRAVITY
+// ─────────────────────────────────────────────
 function compactColumn(col){
 
   const values = [];
@@ -217,8 +211,9 @@ function compactColumn(col){
 
 }
 
-
-// key controls
+// ─────────────────────────────────────────────
+// CONTROLS
+// ─────────────────────────────────────────────
 document.addEventListener("keydown",(e)=>{
 
   if(!gameActive) return;
@@ -247,7 +242,6 @@ document.addEventListener("keydown",(e)=>{
 
 });
 
-
 function hardDrop(){
 
   while(canMoveTo(current.row+1,current.col)){
@@ -259,8 +253,9 @@ function hardDrop(){
 
 }
 
-
-// render board
+// ─────────────────────────────────────────────
+// RENDER
+// ─────────────────────────────────────────────
 function render(){
 
   const board = document.getElementById("board");
@@ -286,10 +281,6 @@ function render(){
         div.textContent=grid[r][c];
         div.classList.add("placed");
 
-        if(mergingCells.has(`${r},${c}`)){
-          div.classList.add("merging");
-        }
-
       }
 
       board.appendChild(div);
@@ -300,14 +291,16 @@ function render(){
 
 }
 
-
-// score
+// ─────────────────────────────────────────────
+// SCORE
+// ─────────────────────────────────────────────
 function updateScore(){
   document.getElementById("score").textContent=score;
 }
 
-
-//game over
+// ─────────────────────────────────────────────
+// GAME OVER
+// ─────────────────────────────────────────────
 function endGame(){
 
   gameActive=false;
@@ -318,8 +311,9 @@ function endGame(){
 
 }
 
-
-// start game
+// ─────────────────────────────────────────────
+// START GAME
+// ─────────────────────────────────────────────
 function startGame(){
 
   clearInterval(gameLoop);
@@ -341,6 +335,5 @@ function startGame(){
   gameLoop=setInterval(tick,SPEED);
 
 }
-
 
 startGame();
