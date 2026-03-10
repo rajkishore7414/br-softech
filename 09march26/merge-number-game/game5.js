@@ -112,6 +112,7 @@ function spawnBlock() {
 
 // this fn will control the movement of the block which controls the movements
 function canMoveTo(row, col) {
+  console.log("Checking move to:", row, col);
   if (col < 0 || col >= COLS) return false;
   if (row >= ROWS)             return false;
   if (grid[row][col] !== 0)    return false;
@@ -121,6 +122,8 @@ function canMoveTo(row, col) {
 
 // imp/ this fn will called by setInterval, 
 function tick() {
+  console.log("Tick running");
+  console.log("Current row:", current.row);
   if (!gameActive) return;
   if (isMerging)   return;   // wait for animation to finish
 
