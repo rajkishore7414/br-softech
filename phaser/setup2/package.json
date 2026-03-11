@@ -1,0 +1,20 @@
+{
+  "name": "setup2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.105.4",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "html-webpack-plugin": "^5.6.6",
+    "mini-css-extract-plugin": "^2.10.1"
+  }
+}
