@@ -91,10 +91,47 @@
 
 
 
+// import Phaser from "phaser";
+// import PreloadScene from "./scenes/PreloadScene";
+// import MenuScene from "./scenes/MenuScene";
+// import LevelSelectScene from "./scenes/LevelSelectScene";
+
+// const config = {
+//   type: Phaser.AUTO,
+//   width: window.innerWidth,
+//   height: window.innerHeight,
+//   backgroundColor: "#6b3fa0",
+//   parent: "game",
+//   scale: {
+//     mode: Phaser.Scale.RESIZE,
+//     autoCenter: Phaser.Scale.CENTER_BOTH,
+//   },
+//   scene: [PreloadScene, MenuScene, LevelSelectScene]
+// };
+
+// new Phaser.Game(config);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import Phaser from "phaser";
 import PreloadScene from "./scenes/PreloadScene";
 import MenuScene from "./scenes/MenuScene";
 import LevelSelectScene from "./scenes/LevelSelectScene";
+import GameScene from "./scenes/GameScene";
 
 const config = {
   type: Phaser.AUTO,
@@ -106,11 +143,10 @@ const config = {
     mode: Phaser.Scale.RESIZE,
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
-  scene: [PreloadScene, MenuScene, LevelSelectScene]
+  scene: [PreloadScene, MenuScene, LevelSelectScene, GameScene]
 };
 
 new Phaser.Game(config);
-
 
 
 
