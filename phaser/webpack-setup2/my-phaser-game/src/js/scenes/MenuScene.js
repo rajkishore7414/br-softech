@@ -9,8 +9,8 @@ export default class MenuScene extends Phaser.Scene {
   create() {
     console.log("MenuScene started");
 
-    const cx = this.scale.width / 2;
-    const cy = this.scale.height / 2;
+    const cx = this.scale.width / 2; //WHY WE HAVE WRITTEN THIS OVER HERE
+    const cy = this.scale.height / 2; //
 
     // background
     this.add.image(cx, cy, KEYS.BG_MENU)
