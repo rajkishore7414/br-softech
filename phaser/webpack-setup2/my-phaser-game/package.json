@@ -7,7 +7,7 @@
     "build": "webpack --mode production"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kushar RAj ",
   "license": "ISC",
   "description": "",
   "devDependencies": {
