@@ -1,0 +1,101 @@
+body {
+  background: #000000;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+#loading_back {
+  position: fixed;
+  height: 100%;
+  width: auto;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+#loading_img {
+  position: fixed;
+  height: auto;
+  left: 0;
+  top: 50%;
+  width: 180px;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(-50%);
+}
+
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url('https://ik.imagekit.io/iyafbeire/Virtual_Andar_Bahar_1.0_HTML5/assets/fonts/roboto/Roboto-Medium.ttf');
+}
+
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url('https://ik.imagekit.io/iyafbeire/Virtual_Andar_Bahar_1.0_HTML5/assets/fonts/font_family/Noto Sans Arabic/NotoSansArabic-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Noto Sans Thai";
+  src: url('./assets/fonts/font_family/Noto Sans Thai/NotoSansThai-Regular.ttf');
+}
+
+@font-face {
+  font-family: "TiroDevanagari";
+  src: url('https://ik.imagekit.io/iyafbeire/Virtual_Andar_Bahar_1.0_HTML5/assets/fonts/font_family/TiroDevanagariHindi-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("https://ik.imagekit.io/iyafbeire/Virtual_Andar_Bahar_1.0_HTML5/assets/fonts/roboto/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Americana Extra Bold";
+  src: url("https://ik.imagekit.io/iyafbeire/Virtual_Andar_Bahar_1.0_HTML5/assets/fonts/Americana Extra Bold/Americana Extra Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "RobotoCondensed-Regular";
+  src: url("https://ik.imagekit.io/iyafbeire/Virtual_Andar_Bahar_1.0_HTML5/assets/fonts/roboto/RobotoCondensed-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("https://ik.imagekit.io/iyafbeire/Virtual_Andar_Bahar_1.0_HTML5/assets/fonts/fonts/Montserrat-Bold.otf") format("opentype");
+}
+
+/* 
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("https://ik.imagekit.io/iyafbeire/Virtual_Andar_Bahar_1.0_HTML5/assets/fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Americana\ Extra\ Bold";
+  src: url("https://ik.imagekit.io/iyafbeire/Virtual_Andar_Bahar_1.0_HTML5/assets/fonts/Americana Extra Bold/Americana\ Extra\ Bold.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoCondensed-Regular";
+  src: url("https://ik.imagekit.io/iyafbeire/Virtual_Andar_Bahar_1.0_HTML5/assets/fonts/roboto/RobotoCondensed-Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("https://ik.imagekit.io/iyafbeire/Virtual_Andar_Bahar_1.0_HTML5/assets/fonts/fonts/Montserrat-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+} */
