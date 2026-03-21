@@ -1,0 +1,13 @@
+
+Win_Outer.png
+size: 256, 256
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+OutLine_Glow_3
+  rotate: false
+  xy: 2, 2
+  size: 133, 178
+  orig: 133, 180
+  offset: 0, 1
+  index: -1

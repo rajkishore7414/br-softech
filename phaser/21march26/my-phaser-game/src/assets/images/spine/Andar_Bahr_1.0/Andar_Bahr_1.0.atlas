@@ -1,0 +1,153 @@
+
+Andar_Bahr_1.0.png
+size: 2048, 512
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+Body_2
+  rotate: false
+  xy: 2, 24
+  size: 398, 449
+  orig: 399, 675
+  offset: 0, 226
+  index: -1
+Card
+  rotate: true
+  xy: 682, 277
+  size: 196, 301
+  orig: 196, 301
+  offset: 0, 0
+  index: -1
+Card_Hand_Palm
+  rotate: false
+  xy: 1848, 360
+  size: 170, 113
+  orig: 170, 113
+  offset: 0, 0
+  index: -1
+Card_Palm_R
+  rotate: false
+  xy: 780, 68
+  size: 181, 97
+  orig: 194, 98
+  offset: 13, 0
+  index: -1
+Dek_01
+  rotate: false
+  xy: 1614, 325
+  size: 232, 148
+  orig: 232, 148
+  offset: 0, 0
+  index: -1
+Dek_02
+  rotate: false
+  xy: 1256, 228
+  size: 58, 87
+  orig: 58, 87
+  offset: 0, 0
+  index: -1
+Eyeball
+  rotate: false
+  xy: 1848, 344
+  size: 82, 14
+  orig: 82, 14
+  offset: 0, 0
+  index: -1
+Face2
+  rotate: true
+  xy: 402, 35
+  size: 179, 208
+  orig: 179, 208
+  offset: 0, 0
+  index: -1
+Hair01
+  rotate: false
+  xy: 402, 216
+  size: 278, 257
+  orig: 278, 257
+  offset: 0, 0
+  index: -1
+L_Arm_2
+  rotate: true
+  xy: 1300, 322
+  size: 151, 312
+  orig: 151, 312
+  offset: 0, 0
+  index: -1
+L_Earring
+  rotate: false
+  xy: 2020, 432
+  size: 20, 41
+  orig: 20, 41
+  offset: 0, 0
+  index: -1
+L_Hand_2
+  rotate: false
+  xy: 682, 167
+  size: 269, 108
+  orig: 269, 108
+  offset: 0, 0
+  index: -1
+L_Kangan
+  rotate: true
+  xy: 612, 186
+  size: 28, 64
+  orig: 28, 64
+  offset: 0, 0
+  index: -1
+L_Palm
+  rotate: false
+  xy: 612, 50
+  size: 166, 115
+  orig: 166, 115
+  offset: 0, 0
+  index: -1
+L_Palm_02
+  rotate: false
+  xy: 963, 101
+  size: 148, 114
+  orig: 148, 114
+  offset: 0, 0
+  index: -1
+R_Arm_2
+  rotate: true
+  xy: 985, 317
+  size: 156, 313
+  orig: 156, 313
+  offset: 0, 0
+  index: -1
+R_Earring
+  rotate: false
+  xy: 953, 234
+  size: 20, 41
+  orig: 20, 41
+  offset: 0, 0
+  index: -1
+R_Hand_2
+  rotate: false
+  xy: 985, 217
+  size: 269, 98
+  orig: 269, 98
+  offset: 0, 0
+  index: -1
+R_Kangan
+  rotate: true
+  xy: 963, 71
+  size: 28, 63
+  orig: 28, 63
+  offset: 0, 0
+  index: -1
+R_Palm01
+  rotate: false
+  xy: 1113, 100
+  size: 147, 115
+  orig: 147, 115
+  offset: 0, 0
+  index: -1
+White_PArt
+  rotate: false
+  xy: 2, 2
+  size: 105, 20
+  orig: 105, 20
+  offset: 0, 0
+  index: -1
