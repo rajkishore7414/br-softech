@@ -3,6 +3,7 @@ import Phaser from 'phaser';
 import { config } from './GameConfig'
 import PreloadScene from "../scenes/PreloadScene";
 import GameScene from '../scenes/GameScene';
+import SocketConection from '../Socket';
 
 
 let preloadScene = new PreloadScene();
@@ -13,7 +14,7 @@ export default GAMEINSTANCE;
 
 
 window.onload = function () {
-    console.log("hello is this", GAMEINSTANCE, Phaser)
+    // console.log("hello is this", GAMEINSTANCE, Phaser)
     GAMEINSTANCE.scene.add('PreloadScene', preloadScene);
     GAMEINSTANCE.scene.add('GameScene', gameScene);
     GAMEINSTANCE.scene.start('PreloadScene');
@@ -25,4 +26,4 @@ window.onload = function () {
 
 
 
-// new SocketConection(); //this is for Socket connection -> receive data from backend
+new SocketConection(); //this is for Socket connection -> receive data from backend

@@ -18,13 +18,13 @@ export default class PreloadScene extends Phaser.Scene {
         this.load.on("progress", this.loadProgress, this);
         this.load.on("complete", this.OnComplete, this);
         this.load.image("game-loader", "assets/images/loading/loader.jpg");
-        this.load.image("home-icon", "assets/images/Home/home_icon.png")
+        this.load.image("home-icon", "assets/images/Home/home_icon.png");
         // this.load.spritesheet("loader-animation", "assets/images/loading/unnamed.gif")
 
         this.load.multiatlas("spriteAtlas", "assets/images/_Vir_Andar_Bahr_1.0_Sprite_Sheet/Vir_Andar_Bahr_1.0_Sprite_Sheet.json");
 
 
-
+        this.load.multiatlas("Cards",  "assets/images/cards/Card_Sprite.json");
         this.load.start(); //NOW the actual downloading begins. Phaser goes through the queue and fetches each file.
 
 
@@ -34,6 +34,7 @@ export default class PreloadScene extends Phaser.Scene {
     OnComplete() {
         GAMEINSTANCE.scene.stop("PreloadScene");
         GAMEINSTANCE.scene.start("GameScene");
+
     }
 
 }

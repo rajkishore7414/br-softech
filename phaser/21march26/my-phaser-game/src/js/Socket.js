@@ -1,5 +1,6 @@
 export default class SocketConection {
-  constructor() {
+  constructor(scene) {
+    this.scene = scene;
     this.create();
   }
   async create() {
@@ -8,13 +9,15 @@ export default class SocketConection {
     let urlString = window.location.href;
     let queryStringData = urlString.split("?")[1];
     console.log("queryStringData", queryStringData);
+    console.log("url string - Socket.js" + urlString);
 
 
     this.baseURL = "http://138.2.111.156";
+    // this.baseURL = "http://192.168.0.108:5000";
 
 
     // let fullUrl = this.baseURL + "/hubs/VirAnderBaharHub?" + queryStringData;
-     let fullUrl = this.baseURL + "/hubs/VirAnderBahar1Hub?" + queryStringData;
+    let fullUrl = this.baseURL + "/hubs/VirAnderBahar1Hub?" + queryStringData;
 
 
     let connection = new signalR.HubConnectionBuilder()
@@ -39,11 +42,20 @@ export default class SocketConection {
       console.log("On ConError", JSON.parse(this.DataDecryption(data)))
     })
 
+
     connection.on("EventResponse", (data) => {
       this.eventResponseData = this.DataDecryption(data);
       this.eventResponseJsonData = JSON.parse(this.eventResponseData);
       this.method = this.eventResponseJsonData.Method;
       console.log("this.method========?", this.eventResponseJsonData);
+      
+      // console.log("rthisanjhdvaghdva", this, this.scene);
+      // this.scene.ok();
+
+      // this.scene.game.events.emit("raj", this.eventResponseJsonData)
+
+
+
 
       //   switch (this.method) {
       //     case 2:
@@ -157,7 +169,7 @@ export default class SocketConection {
     return methodDecryptedData.toString(CryptoJS.enc.Utf8);
   }
 
-} 
+}
 
 
 
